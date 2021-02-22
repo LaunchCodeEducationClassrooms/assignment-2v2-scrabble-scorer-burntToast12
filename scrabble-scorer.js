@@ -102,7 +102,7 @@ function scorerPrompt() {
 Enter 0, 1, or 2: `);
 
   
-    console.log(`Score for "${initial}": ` + scoringAlgorithms[prompt].scorerFunction(initial));
+    console.log(`Score for "${initial}": ` + scoringAlgorithms[prompt].scoringFunction(initial));
 
 return prompt
 }
@@ -121,12 +121,13 @@ let newPointStructure = transform(oldPointStructure);
 newPointStructure[' '] = 0;
 
 function scrabbleScore(word){
-  word = word.toUpperCase();
+  word = word.toLowerCase();
 	let letterPoints = 0;
  
 	for (let i = 0; i < word.length; i++) {
 	  for (const letter in newPointStructure) {
 		 if (letter == word[i]) {
+       console.log(newPointStructure[letter]);
 			letterPoints += Number(newPointStructure[letter]);
      }
 	  }
