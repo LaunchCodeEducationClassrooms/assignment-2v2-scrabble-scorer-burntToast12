@@ -50,7 +50,7 @@ return score;
 
 function vowelBonusScore(word){
   word = word.toUpperCase();
-  let vowels = ['A', 'E', 'I', 'O','Y'];
+  let vowels = ['A', 'E', 'I', 'O','U'];
 
   let letterPoints = 0;
   
@@ -68,20 +68,20 @@ return letterPoints;
 }
 
 let simpleScorer = {
-    name: "Simple Score",
-    description: "Each letter is worth 1 point.",
+    name: 'Simple Score',
+    description: 'Each letter is worth 1 point.',
     scorerFunction: simpleScore,
   };
 
 let vowelBonusScorer = {
-    name: "Bonus Vowels",
-    description: "Vowels are 3 pts, consonants are 1 pt.",
+    name: 'Bonus Vowels',
+    description: 'Vowels are 3 pts, consonants are 1 pt.',
     scorerFunction: vowelBonusScore,
   };
 
 let scrabbleScorer = {
-    name: "Scrabble",
-    description: "	The traditional scoring algorithm.",
+    name: 'Scrabble',
+    description: '	The traditional scoring algorithm.',
     scorerFunction: scrabbleScore,
   };
 
