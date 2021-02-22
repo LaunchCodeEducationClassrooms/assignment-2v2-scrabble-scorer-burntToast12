@@ -112,7 +112,7 @@ function transform(newObject) {
 
   for (const points in newObject){
     for (let i = 0; i < newObject[points].length; i++){
-      transformed[newObject[points][i]] = Number(points);
+      transformed[newObject[points][i].toLowerCase()] = Number(points);
     }
   }
   return transformed;
@@ -137,7 +137,6 @@ function scrabbleScore(word){
 
 
 function runProgram() {
-  console.log(newPointStructure);
   initialPrompt();
   scorerPrompt();
   
