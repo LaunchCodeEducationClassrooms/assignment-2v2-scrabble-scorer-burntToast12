@@ -138,7 +138,6 @@ function scrabbleScore(word){
 
 
 function runProgram() {
-  console.log(newPointStructure);
   initialPrompt();
   scorerPrompt();
   
